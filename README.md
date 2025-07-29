@@ -25,8 +25,8 @@ End-to-end detection, response and remediation of cloud security incidents using
   - [10. Additional Evidence]
   - [11. ⭐ Bonus & Extras]
 - [Screenshots](#screenshots)
-  - [Core Lab Screenshots](#main-lab-screenshots)
-  - [Bonus Screenshots][#bonus-screenshots]
+  - [Core Lab Screenshots]
+  - [⭐ Bonus Screenshots]
 - [Lessons Learned](#lessons-learned)
 - [Post-Incident SOC Analysis](#post-incident-soc-analysis)
 - [Notes & Limitations](#notes--limitations)
@@ -188,7 +188,7 @@ Below are the core and bonus screenshots that document each step and added value
 | 11   | sentinel-custom-analytics-rule.png    | Custom analytics rule for brute-force detection     |
 | 11   | auto-provisioning-agent-grayed.png    | Auto-provisioning agent status                      |
 
-## Bonus Screenshots:
+## ⭐ Bonus Screenshots:
 
 | Step/Area    | Filename(s)                            | Description                                                                         |
 | ------------ | -------------------------------------- | ----------------------------------------------------------------------------------- |
