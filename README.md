@@ -6,7 +6,7 @@ End-to-end detection, response and remediation of cloud security incidents using
 
 ## Table of Contents
 
-- [Overview](#overview)
+- [Overview]
 - [Real-World Risk]
 - [What I Built]
 - [Diagram]
