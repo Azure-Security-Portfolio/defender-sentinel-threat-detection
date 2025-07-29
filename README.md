@@ -23,7 +23,7 @@ End-to-end detection, response and remediation of cloud security incidents using
   - [8. Visualization]
   - [9. Cleanup] 
   - [10. Additional Evidence]
-  - [11. ⭐ Bonus & Extras]
+  - [11.⭐ Bonus & Extras]
 - [Screenshots](#screenshots)
   - [Core Lab Screenshots]
   - [⭐ Bonus Screenshots]
