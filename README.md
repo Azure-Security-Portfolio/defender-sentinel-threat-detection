@@ -26,7 +26,7 @@ End-to-end detection, response and remediation of cloud security incidents using
   - [11. ⭐ Bonus & Extras]
 - [Screenshots](#screenshots)
   - [Core Lab Screenshots](#main-lab-screenshots)
-  - [Bonus Screenshots][#bonus-screenshots]
+  - [⭐ Bonus Screenshots][#⭐-bonus-screenshots]
 - [Lessons Learned](#lessons-learned)
 - [Post-Incident SOC Analysis](#post-incident-soc-analysis)
 - [Notes & Limitations](#notes--limitations)
