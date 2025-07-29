@@ -70,7 +70,7 @@ I deployed a simulated SOC workflow—detecting threats, investigating alerts, t
 
 ---
 
-## Bonus Diagram: Automated Response with Sentinel Playbooks
+## Bonus Diagram
 
 ![Sentinel Playbook Automation Architecture](diagram2.png)
 
