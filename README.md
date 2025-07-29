@@ -126,6 +126,7 @@ I deployed a simulated SOC workflow—detecting threats, investigating alerts, t
    - Included key screenshots of log analytics workspace, storage account and VM details *(Screenshots: log-analytics-workspace.png, storage-account-overview.png, vm-overview.png, sentinel-custom-analytics-rule.png, auto-provisioning-agent-grayed.png)*
 
 **11. ⭐ Bonus & Extras: Advanced Sentinel Configurations & Best Practices**
+
 a. Custom Data Collection Rule (DCR) Setup
    - To demonstrate advanced log forwarding, I configured a Data Collection Rule (DCR) to forward VM logs directly to Sentinel *(Screenshot: dcr_review-create_final-settings.png)*
 
