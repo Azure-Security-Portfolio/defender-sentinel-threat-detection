@@ -21,8 +21,8 @@ End-to-end detection, response and remediation of cloud security incidents using
   - [7. Remediation & Secure Score]  
   - [8. Visualization]
   - [9. Cleanup]
-  - [10. Additional Evidence]  
-  - [11. Cleanup]
+  - [10. Additional Evidence]
+  - [11. Bonus & Extras]
 - [Screenshots]
 - [Lessons Learned]
 - [Post-Incident SOC Analysis]
@@ -66,6 +66,14 @@ I deployed a simulated SOC workflow—detecting threats, investigating alerts, t
 ## Diagram
 
 ![Lab 8 Architecture](diagram.png)
+
+---
+
+## Bonus Diagram: Automated Response with Sentinel Playbooks
+
+![Sentinel Playbook Automation Architecture](diagram2.png)
+
+*This diagram shows how security events are collected from VMs, analyzed by Sentinel and how incidents can trigger automated responses such as Logic App playbooks for real-time alerting or remediation.*
 
 ---
 
@@ -116,18 +124,32 @@ I deployed a simulated SOC workflow—detecting threats, investigating alerts, t
 **10. Additional Evidence**  
    - Included key screenshots of log analytics workspace, storage account and VM details *(Screenshots: log-analytics-workspace.png, storage-account-overview.png, vm-overview.png, sentinel-custom-analytics-rule.png, auto-provisioning-agent-grayed.png)*
 
-**11. Cleanup**
+**11. Bonus & Extras: Advanced Sentinel Configurations & Best Practices**
+a. Custom Data Collection Rule (DCR) Setup
+   - To demonstrate advanced log forwarding, I configured a Data Collection Rule (DCR) to forward VM logs directly to Sentinel *(Screenshot: dcr_review-create_final-settings.png)*
 
-- Detached Microsoft Sentinel from the Log Analytics Workspace to stop SIEM/SOAR billing.
-- Deleted all lab resources (VMs, Storage, Logic Apps, etc.) by removing the dedicated resource group in Azure Portal.
-- Verified that no running VMs, Log Analytics Workspaces or other paid resources remained.
-- Checked Azure Cost Management for leftover or hidden costs.
+b. Log Collection Architecture
+   - The following diagram shows how VM security events are routed to Sentinel (*Screenshot: sentinel_dataflow_vm-to-sentinel.png*)
+
+c. Integrating Threat Intelligence & Identity Protection
+Connected Microsoft Entra ID Protection to enrich Sentinel incidents with identity risk signals *(Screenshot: entra-id-protection-connector.png)*
+
+d. Cloud Governance: Resource Tagging
+Applied best-practice tags to workspaces and resource groups for improved cost management and security oversight *(Screenshots: law-tags.png & resource-group-tags.png*
+
+e. Additional Analytics Rules
+As part of defense-in-depth, created custom Sentinel analytics rules for user sign-in detection *(Screenshot: create-custom-analytic-rule.png)*
+
+f. Additional Automation Rules
+Set up automation rules to assign owners and email alerts on incident creation *(Screenshot: sentinel-automation-rule-creation.png)*
 
 ---
 
 ## Screenshots
 
 *All screenshots are included in the screenshots/ folder.*
+
+- Main Lab Screenshots:
 
 | Step | Filename                              | Description                                         |
 |------|---------------------------------------|-----------------------------------------------------|
@@ -160,6 +182,17 @@ I deployed a simulated SOC workflow—detecting threats, investigating alerts, t
 | 10   | vm-overview.png                       | Azure VM overview/details                           |
 | 11   | sentinel-custom-analytics-rule.png    | Custom analytics rule for brute-force detection     |
 | 11   | auto-provisioning-agent-grayed.png    | Auto-provisioning agent status                      |
+
+- Bonus & Advanced Evidence:
+
+| Step/Area    | Filename(s)                            | Description                                                                         |
+| ------------ | -------------------------------------- | ----------------------------------------------------------------------------------- |
+| DCR Setup    | dcr-review-create-final-settings.png   | **Custom Data Collection Rule:** Forward VM logs to Sentinel (DCR configuration)    |
+| Dataflow     | sentinel-dataflow-vm-to-sentinel.png   | **Log Collection Architecture:** VM → DCR → LAW → Sentinel (+ Playbook/Automation)  |
+| Threat Intel | entra-id-protection-connector.png      | **Entra ID Protection:** Enrich Sentinel incidents with identity risk signals       |
+| Tagging      | law-tags.png, resource-group-tags.png  | **Cloud Governance:** Applied best-practice tags to LAW and resource groups         |
+| Custom Rules | create-custom-analytic-rule.png        | **Analytics:** Custom analytics rule for user sign-in detection (defense-in-depth)  |
+| Automation   | sentinel-automation-rule-creation.png  | **Automation:** Assign owners + send email on incident creation (SOC best practice) |
 
 ---
 
