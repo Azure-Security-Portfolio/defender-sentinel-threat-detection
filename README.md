@@ -6,28 +6,28 @@ End-to-end detection, response and remediation of cloud security incidents using
 
 ## Table of Contents
 
-- [Overview]
-- [Real-World Risk]
-- [What I Built]
-- [Diagram]
-- [Objectives]
-- [Steps Performed]
-  - [1. Resource Group & Workspace Setup]  
-  - [2. Defender for Cloud & Sentinel Activation]  
-  - [3. Agent & Data Connector Verification]  
-  - [4. Threat Simulation]  
-  - [5. Alert Detection & Incident Investigation]  
-  - [6. Automated Incident Response]   
-  - [7. Remediation & Secure Score]  
-  - [8. Visualization]
-  - [9. Cleanup]
-  - [10. Additional Evidence]
-  - [11. Bonus & Extras]
-- [Screenshots]
-- [Lessons Learned]
-- [Post-Incident SOC Analysis]
-- [Notes & Limitations]
-- [References]
+- [Overview](#overview)
+- [Real-World Risk](#real-world-risk)
+- [What I Built](#what-i-built)
+- [Diagram](#diagram)  
+- [Objectives](#objectives)
+- [Steps Performed](#steps-performed)
+  - [1. Resource Group & Workspace Setup](#1-resource-group--workspace-setup)
+  - [2. Defender for Cloud & Sentinel Activation](#2-defender-for-cloud--sentinel-activation)  
+  - [3. Agent & Data Connector Verification](#3-agent--data-connector-verification)  
+  - [4. Threat Simulation](#4-threat-simulation)  
+  - [5. Alert Detection & Incident Investigation](#5-alert-detection--incident-investigation)  
+  - [6. Automated Incident Response](#6-automated-incident-response)   
+  - [7. Remediation & Secure Score](#7-remediation--secure-score)  
+  - [8. Visualization](#8-visualization)
+  - [9. Cleanup](#9-cleanup)   
+  - [10. Additional Evidence](#10-additional-evidence)
+  - [11. ⭐ Bonus & Extras](#11--bonus--extras)
+- [Screenshots](#screenshots)
+- [Lessons Learned](#lessons-learned)
+- [Post-Incident SOC Analysis](#post-incident-soc-analysis)
+- [Notes & Limitations](#notes--limitations)
+- [References](#references)   
 
 ---
 
@@ -124,7 +124,7 @@ I deployed a simulated SOC workflow—detecting threats, investigating alerts, t
 **10. Additional Evidence**  
    - Included key screenshots of log analytics workspace, storage account and VM details *(Screenshots: log-analytics-workspace.png, storage-account-overview.png, vm-overview.png, sentinel-custom-analytics-rule.png, auto-provisioning-agent-grayed.png)*
 
-**11. Bonus & Extras: Advanced Sentinel Configurations & Best Practices**
+**11. ⭐ Bonus & Extras: Advanced Sentinel Configurations & Best Practices**
 a. Custom Data Collection Rule (DCR) Setup
    - To demonstrate advanced log forwarding, I configured a Data Collection Rule (DCR) to forward VM logs directly to Sentinel *(Screenshot: dcr_review-create_final-settings.png)*
 
@@ -148,6 +148,8 @@ Set up automation rules to assign owners and email alerts on incident creation *
 ## Screenshots
 
 *All screenshots are included in the screenshots/ folder.*
+
+Below are the core and bonus/advanced screenshots that document each step and added value.
 
 - Main Lab Screenshots:
 
@@ -183,7 +185,7 @@ Set up automation rules to assign owners and email alerts on incident creation *
 | 11   | sentinel-custom-analytics-rule.png    | Custom analytics rule for brute-force detection     |
 | 11   | auto-provisioning-agent-grayed.png    | Auto-provisioning agent status                      |
 
-- Bonus & Advanced Evidence:
+- ⭐ Bonus Screenshots:
 
 | Step/Area    | Filename(s)                            | Description                                                                         |
 | ------------ | -------------------------------------- | ----------------------------------------------------------------------------------- |
@@ -229,7 +231,7 @@ Set up automation rules to assign owners and email alerts on incident creation *
 
 - Some brute-force alerts may require custom KQL analytics rules and ensuring SecurityEvent logs are ingested by Log Analytics.
 - Real-world incidents may require additional forensics/investigation steps.
-- Billing: Sentinel must be manually deactivated/removed from workspace after lab to avoid charges.
+- Billing: To avoid unnecessary costs, always manually remove the Sentinel solution and delete the lab resource group after completing the lab.
 
 ---
 
