@@ -13,18 +13,20 @@ End-to-end detection, response and remediation of cloud security incidents using
 - [Bonus Diagram](#bonus-diagram)
 - [Objectives](#objectives)
 - [Steps Performed](#steps-performed)
-  - [1. Resource Group & Workspace Setup](#1-resource-group--workspace-setup)
-  - [2. Defender for Cloud & Sentinel Activation](#2-defender-for-cloud--sentinel-activation)  
-  - [3. Agent & Data Connector Verification](#3-agent--data-connector-verification)  
-  - [4. Threat Simulation](#4-threat-simulation)  
-  - [5. Alert Detection & Incident Investigation](#5-alert-detection--incident-investigation)  
-  - [6. Automated Incident Response](#6-automated-incident-response)   
-  - [7. Remediation & Secure Score](#7-remediation--secure-score)  
-  - [8. Visualization](#8-visualization)
-  - [9. Cleanup](#9-cleanup)   
-  - [10. Additional Evidence](#10-additional-evidence)
-  - [11. ⭐ Bonus & Extras](#11--bonus--extras)
+  - [1. Resource Group & Workspace Setup]
+  - [2. Defender for Cloud & Sentinel Activation]  
+  - [3. Agent & Data Connector Verification] 
+  - [4. Threat Simulation]
+  - [5. Alert Detection & Incident Investigation]
+  - [6. Automated Incident Response]  
+  - [7. Remediation & Secure Score] 
+  - [8. Visualization]
+  - [9. Cleanup] 
+  - [10. Additional Evidence]
+  - [11. ⭐ Bonus & Extras]
 - [Screenshots](#screenshots)
+  - [Main Lab Screenshots]
+  - [Bonus Screenshots]
 - [Lessons Learned](#lessons-learned)
 - [Post-Incident SOC Analysis](#post-incident-soc-analysis)
 - [Notes & Limitations](#notes--limitations)
@@ -134,16 +136,16 @@ b. Log Collection Architecture
    - The following diagram shows how VM security events are routed to Sentinel (*Screenshot: sentinel_dataflow_vm-to-sentinel.png*)
 
 c. Integrating Threat Intelligence & Identity Protection
-Connected Microsoft Entra ID Protection to enrich Sentinel incidents with identity risk signals *(Screenshot: entra-id-protection-connector.png)*
+   - Connected Microsoft Entra ID Protection to enrich Sentinel incidents with identity risk signals *(Screenshot: entra-id-protection-connector.png)*
 
 d. Cloud Governance: Resource Tagging
-Applied best-practice tags to workspaces and resource groups for improved cost management and security oversight *(Screenshots: law-tags.png & resource-group-tags.png*
+   - Applied best-practice tags to workspaces and resource groups for improved cost management and security oversight *(Screenshots: law-tags.png & resource-group-tags.png*
 
 e. Additional Analytics Rules
-As part of defense-in-depth, created custom Sentinel analytics rules for user sign-in detection *(Screenshot: create-custom-analytic-rule.png)*
+   - As part of defense-in-depth, created custom Sentinel analytics rules for user sign-in detection *(Screenshot: create-custom-analytic-rule.png)*
 
 f. Additional Automation Rules
-Set up automation rules to assign owners and email alerts on incident creation *(Screenshot: sentinel-automation-rule-creation.png)*
+   - Set up automation rules to assign owners and email alerts on incident creation *(Screenshot: sentinel-automation-rule-creation.png)*
 
 ---
 
