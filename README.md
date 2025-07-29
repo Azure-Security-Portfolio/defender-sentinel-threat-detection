@@ -9,7 +9,8 @@ End-to-end detection, response and remediation of cloud security incidents using
 - [Overview](#overview)
 - [Real-World Risk](#real-world-risk)
 - [What I Built](#what-i-built)
-- [Diagram](#diagram)  
+- [Main Diagram](#main-diagram)
+- [Bonus Diagram](#bonus-diagram)
 - [Objectives](#objectives)
 - [Steps Performed](#steps-performed)
   - [1. Resource Group & Workspace Setup](#1-resource-group--workspace-setup)
@@ -63,7 +64,7 @@ I deployed a simulated SOC workflow—detecting threats, investigating alerts, t
 
 ---
 
-## Diagram
+## Main Diagram
 
 ![Lab 8 Architecture](diagram.png)
 
