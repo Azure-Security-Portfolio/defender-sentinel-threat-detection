@@ -1,6 +1,6 @@
-## Azure Security Lab 08: Monitoring & Detection with Microsoft Sentinel & Defender for Cloud
+## Monitoring & Detection with Microsoft Sentinel & Defender for Cloud
 
-End-to-end detection, response, and remediation of cloud security incidents using Microsoft Sentinel SIEM/SOAR and Defender for Cloud.
+End-to-end detection, response and remediation of cloud security incidents using Microsoft Sentinel SIEM/SOAR and Defender for Cloud.
 
 ---
 
