@@ -1,0 +1,7 @@
+// Detects 5+ failed RDP logins in 10 minutes (Event ID 4625)
+SecurityEvent
+| where EventID == 4625
+| where AccountType == "User"
+| where LogonType == 10 // RemoteInteractive (RDP)
+| summarize AttemptCount = count() by bin(TimeGenerated, 10m), Computer, Account
+| where AttemptCount >= 5

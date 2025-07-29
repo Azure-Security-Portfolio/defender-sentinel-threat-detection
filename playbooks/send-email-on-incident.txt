@@ -1,0 +1,62 @@
+{
+  "definition": {
+    "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+    "actions": {
+      "Send_an_email_(V2)": {
+        "type": "ApiConnection",
+        "inputs": {
+          "host": {
+            "connection": {
+              "name": "@parameters('$connections')['office365']['connectionId']"
+            }
+          },
+          "method": "post",
+          "path": "/v2/Mail",
+          "body": {
+            "To": [
+              "YOUR-EMAIL-HERE"
+            ],
+            "Subject": "ALERT: New Sentinel Incident - @{triggerOutputs()?['body/Properties/Title']}",
+            "Body": "<h3>New Sentinel Incident Detected</h3><p><strong>Title:</strong> @{triggerOutputs()?['body/Properties/Title']}<br/><strong>Severity:</strong> @{triggerOutputs()?['body/Properties/Severity']}<br/><strong>Status:</strong> @{triggerOutputs()?['body/Properties/Status']}<br/><strong>Owner:</strong> @{triggerOutputs()?['body/Properties/Owner']}<br/><strong>Incident URL:</strong> <a href='@{triggerOutputs()?['body/Properties/IncidentUrl']}'>View Incident</a></p>"
+          }
+        },
+        "runAfter": {},
+        "metadata": {
+          "operationMetadataId": "sendEmail"
+        }
+      }
+    },
+    "connectors": {
+      "office365": {
+        "connectionId": "/subscriptions/YOUR-SUB-ID/resourceGroups/YOUR-RG/providers/Microsoft.Web/connections/office365",
+        "connectionName": "office365",
+        "id": "/subscriptions/YOUR-SUB-ID/providers/Microsoft.Web/locations/YOUR-REGION/managedApis/office365"
+      }
+    },
+    "triggers": {
+      "When_a_response_to_an_Azure_Sentinel_alert_is_triggered": {
+        "type": "ApiConnectionWebhook",
+        "inputs": {
+          "host": {
+            "connection": {
+              "name": "@parameters('$connections')['azureSentinel']['connectionId']"
+            }
+          },
+          "path": "/Incidents/OnIncident",
+          "method": "post"
+        },
+        "metadata": {
+          "operationMetadataId": "sentinelTrigger"
+        }
+      }
+    },
+    "contentVersion": "1.0.0.0",
+    "outputs": {}
+  },
+  "parameters": {
+    "$connections": {
+      "defaultValue": {},
+      "type": "Object"
+    }
+  }
+}
