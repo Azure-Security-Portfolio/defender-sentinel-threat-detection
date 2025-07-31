@@ -23,14 +23,15 @@ End-to-end detection, response and remediation of cloud security incidents using
   - [8. Visualization]
   - [9. Cleanup] 
   - [10. Additional Evidence]
-  - [11.⭐ Bonus & Extras]
+  - [11.Bonus & Extras]
 - [Screenshots](#screenshots)
   - [Core Lab Screenshots]
-  - [⭐ Bonus Screenshots]
+  - [Bonus Screenshots]
 - [Lessons Learned](#lessons-learned)
 - [Post-Incident SOC Analysis](#post-incident-soc-analysis)
 - [Notes & Limitations](#notes--limitations)
-- [References](#references)   
+- [References](#references)
+- [Contact](#contact)
 
 ---
 
@@ -248,5 +249,7 @@ Below are the core and bonus screenshots that document each step and added value
 
 ---
 
-Sebastian Silva C. – July 2025 – Berlin, Germany  
-[LinkedIn](https://www.linkedin.com/in/sebastiansilc/) | [GitHub](https://github.com/SebaSilC)
+## Contact
+
+Sebastian Silva C. – July, 2025 – Berlin, Germany.  
+[LinkedIn](https://www.linkedin.com/in/sebastiansilc) | [GitHub](https://github.com/SebaSilC) | [sebastian@playbookvisualarts.com](mailto:sebastian@playbookvisualarts.com)
